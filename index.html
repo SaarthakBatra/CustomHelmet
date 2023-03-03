@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!-<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/main.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="menu">
+            <div id="color_pallet">
+                <h1>Colour</h1>
+                <form>
+                    <label for="silver_grey">
+                        <input type="radio" name="color" id="silver_grey">
+                        <span class="btn" id="colour_silver_grey"></span>
+                    </label>
+                    <label for="matt_black">
+                        <input type="radio" name="color" id="matt_black">
+                        <span class="btn" id="colour_matt_black"></span>
+                    </label>
+                    <label for="gun_grey">
+                        <input type="radio" name="color" id="gun_grey">
+                        <span class="btn" id="colour_gun_grey"></span>
+                    </label>
+                    <label for="cherry_red">
+                        <input type="radio" name="color" id="cherry_red">
+                        <span class="btn" id="colour_cherry_red"></span>
+                    </label>
+                    <label for="fluroscent_orange">
+                        <input type="radio" name="color" id="fluroscent_orange">
+                        <span class="btn" id="colour_fluroscent_orange"></span>
+                    </label>
+                    <label for="military_green">
+                        <input type="radio" name="color" id="military_green">
+                        <span class="btn" id="colour_military_green"></span>
+                    </label>
+                    <label for="desert_storm">
+                        <input type="radio" name="color" id="desert_storm">
+                        <span class="btn" id="colour_desert_storm"></span>
+                    </label>
+                    <label for="glossy_orange">
+                        <input type="radio" name="color" id="glossy_orange">
+                        <span class="btn" id="colour_glossy_orange"></span>
+                    </label>
+                    <label for="white">
+                        <input type="radio" name="color" id="white">
+                        <span class="btn" id="colour_white"></span>
+                    </label>
+                    <label for="fluroscent_green">
+                        <input type="radio" name="color" id="fluroscent_green">
+                        <span class="btn" id="colour_fluroscent_green"></span>
+                    </label>
+                    <label for="flame_blue">
+                        <input type="radio" name="color" id="flame_blue">
+                        <span class="btn" id="colour_flame_blue"></span>
+                    </label>
+                    <label for="black">
+                        <input type="radio" name="color" id="black">
+                        <span class="btn" id="colour_black"></span>
+                    </label>
+                </form>
+            </div>
+            <div id="text">
+                <h1>Text</h1>
+                <div>
+                    <label for="textIn"></label>
+                    <input type="text" id="textIn" placeholder="Enter Text(10 characters)" maxlength="10">
+                    <input type="button" id="textSubmit" value="Submit">
+                </div>
+                <div>
+                    <p>Print Text on Helmet</p>
+                    <input type="checkbox" name="textVisible" id="textVis">
+                </div>
+                
+            </div>
+            <div id="image">
+                <h1>Image</h1>
+                <input type="file" name="" id="">
+            </div>
+            <div id="Edit">
+                <h1>Edit</h1>
+            </div>
+        </div>
+        <div id="canvas">
+            <div class="gallery">
+                <img src="images/Image1.png" alt="Image of helmet" id="productimg">
+                <p id="helmet_text">TEXT</p>
+            </div>
+        </div>
+        <!-- <div class="container">
+            <div class="product">
+                
+                <div class="details">
+
+                </div>
+            </div>
+        </div> -->
+        
+        <script>
+            let productimg = document.getElementById("productimg");
+            let btn = document.getElementsByClassName("btn");
+
+            btn[0].onclick = function(){productimg.src = "images/Image1.png";}
+            btn[1].onclick = function(){productimg.src = "images/Image2.png";}
+            btn[2].onclick = function(){productimg.src = "images/Image3.png";}
+            btn[3].onclick = function(){productimg.src = "images/Image4.png";}
+            btn[4].onclick = function(){productimg.src = "images/Image5.png";}
+            btn[5].onclick = function(){productimg.src = "images/Image6.png";}
+            btn[6].onclick = function(){productimg.src = "images/Image7.png";}
+            btn[7].onclick = function(){productimg.src = "images/Image8.png";}
+            btn[8].onclick = function(){productimg.src = "images/Image9.png";}
+            btn[9].onclick = function(){productimg.src = "images/Image10.png";}
+            btn[10].onclick = function(){productimg.src = "images/Image11.png";}
+            btn[11].onclick = function(){productimg.src = "images/Image12.png";}
+
+            document.getElementById("textSubmit").onclick = function(){
+                let InputTxt = document.getElementById("textIn");
+                let textOut = document.getElementById("helmet_text");
+
+                textOut.innerHTML = InputTxt.value;
+            }
+
+            document.getElementById("textVis").addEventListener("change", e => {
+                if(e.target.checked == true){
+                    document.getElementById("helmet_text").style.display = "flex";
+                }else if(e.target.checked == false){
+                    document.getElementById("helmet_text").style.display = "none";
+                }
+            })
+            
+        </script>
+    </body>
+</html>
+
+
+
+
